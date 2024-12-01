@@ -8,7 +8,7 @@ def start_game():
     positions = shuffle_positions()
     return jsonify({"positions": positions})
 
-@api.route('/guess', methods=['POST'])
+@api.route('/guess', methods=['GET'])
 def guess():
     data = request.json
     guess = data.get('guess')
